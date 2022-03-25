@@ -1,0 +1,75 @@
+.box
+{
+    height: 350px;
+    width: 300px;
+    background-color: #0a0a0a;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.numbers{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.zero,.one,.two,.three,.four,.five,.six,.seven,.eight,.nine,.sum,.multiply,.divide,.subtract,.equals,.clear
+{ 
+    border-radius: 50%;
+    background: grey;
+    padding: 15px;
+    height: 15px;
+    width: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+}
+
+.sum,.multiply,.divide,.subtract,.equals,.clear
+{
+background-color:#9fe7e73d;
+
+}
+.one:active , .two:active , .three:active, .four:active, .five:active, .six:active, .seven:active, .eight:active, .nine:active, .sum:active, .multiply:active, .divide:active, .equals:active, .subtract:active, .clear:active, .zero:active
+{/*on Click*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*Move down*/
+}
+.output
+{
+    padding: 20px;
+    width:300px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 10px;
+    color: antiquewhite;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: x-large;
+    outline-style:solid;
+    outline-color: antiquewhite;
+    outline-width: 1px;
+}
+
+.sum,.subtract{
+   font-size: 25px;
+}
+body{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #635E87;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.arrange
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
