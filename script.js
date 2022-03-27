@@ -84,24 +84,41 @@ child.forEach((div)=>{
   else if(div.innerText===".")
   {
     if((c!==0)&&(firstpara!==0)&&(out!==0))
-  {
-    if(Number.isInteger(out))
     {
-    out = out + div.innerHTML;
-    outputs.innerHTML = out;
-    return;
+      if(Number.isInteger(out))
+      {
+        out = out + div.innerHTML;
+        outputs.innerHTML = out;
+        return;
+      }
+      else return;
     }
-    else return;
-  }
-   else if(Number.isInteger(c))
+    else if(Number.isInteger(c))
     {
       c = c + div.innerHTML;
-     outputs.innerHTML = c;
-     console.log(c);
-     return;
+      outputs.innerHTML = c;
+      console.log(c);
+      return;
+    }
+      else  return;
+  }
+  else if(div.innerHTML==="CE")
+  {
+    if((c!==0)&&(firstpara!==0)&&(out!==0))
+    {
+      out = out.toString();
+      out = out.substring(0, out.length - 1);
+      outputs.innerHTML = out;
+      return;
     }
     else
-     return;
+    {
+      c=c.toString();
+      c = c.substring(0, c.length - 1);
+      outputs.innerHTML = c;
+      console.log(c);
+      return;
+    }
   }
   if((c!==0)&&(firstpara!==0)&&(out!==0))
   {

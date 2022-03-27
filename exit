@@ -1,0 +1,29 @@
+[33mcommit 40137184533b0bdf7da34f0467f9ada00cbc322a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Nithindmt <Rajkumar_nithin@yahoo.com>
+Date:   Sun Mar 27 18:00:51 2022 +0530
+
+    Fix decimal issue in calculator
+
+[33mcommit 4aca3068cb873a0df8a1112e2223cad9c575ca9d[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Nithindmt <Rajkumar_nithin@yahoo.com>
+Date:   Fri Mar 25 17:00:16 2022 +0530
+
+     Done with Basic Calculator functions and checked working conditions as well
+
+[33mcommit 449ce95d9a63ca4620078ca7a90fd305a3761f6b[m
+Author: Nithindmt <Rajkumar_nithin@yahoo.com>
+Date:   Sat Mar 12 16:16:03 2022 +0530
+
+     Edit index.html to check status
+
+[33mcommit cf15a541914d65190e11884f661e0547bc37f413[m
+Author: Nithindmt <Rajkumar_nithin@yahoo.com>
+Date:   Sat Mar 12 15:55:40 2022 +0530
+
+    Update HTML boilerplate
+
+[33mcommit 827810c7c23b19f7f5e874c991348a1d7b355665[m
+Author: Nithin <89374751+nithindante@users.noreply.github.com>
+Date:   Sat Mar 12 15:34:29 2022 +0530
+
+    Initial commit
