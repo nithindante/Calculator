@@ -81,6 +81,28 @@ child.forEach((div)=>{
     out= 0;
     return;
   } 
+  else if(div.innerText===".")
+  {
+    if((c!==0)&&(firstpara!==0)&&(out!==0))
+  {
+    if(Number.isInteger(out))
+    {
+    out = out + div.innerHTML;
+    outputs.innerHTML = out;
+    return;
+    }
+    else return;
+  }
+   else if(Number.isInteger(c))
+    {
+      c = c + div.innerHTML;
+     outputs.innerHTML = c;
+     console.log(c);
+     return;
+    }
+    else
+     return;
+  }
   if((c!==0)&&(firstpara!==0)&&(out!==0))
   {
     out = out + div.innerHTML;

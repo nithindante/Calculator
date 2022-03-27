@@ -1,6 +1,6 @@
 .box
 {
-    height: 350px;
+    height: 400px;
     width: 300px;
     background-color: #0a0a0a;
     padding: 10px;
@@ -13,7 +13,7 @@
     gap: 5px;
 }
 
-.zero,.one,.two,.three,.four,.five,.six,.seven,.eight,.nine,.sum,.multiply,.divide,.subtract,.equals,.clear
+.zero,.one,.two,.three,.four,.five,.six,.seven,.eight,.nine,.sum,.multiply,.divide,.subtract,.equals,.clear,.dot,.backspace
 { 
     border-radius: 50%;
     background: grey;
@@ -28,12 +28,12 @@
     color: antiquewhite;
 }
 
-.sum,.multiply,.divide,.subtract,.equals,.clear
+.sum,.multiply,.divide,.subtract,.equals,.clear,.dot,.backspace
 {
 background-color:#9fe7e73d;
 
 }
-.one:active , .two:active , .three:active, .four:active, .five:active, .six:active, .seven:active, .eight:active, .nine:active, .sum:active, .multiply:active, .divide:active, .equals:active, .subtract:active, .clear:active, .zero:active
+.one:active , .two:active , .three:active, .four:active, .five:active, .six:active, .seven:active, .eight:active, .nine:active, .sum:active, .multiply:active, .divide:active, .equals:active, .subtract:active, .clear:active, .zero:active, .dot:active, .backspace:active
 {/*on Click*/
     -ms-transform: translateY(4px);
     -webkit-transform: translateY(4px);
@@ -72,4 +72,10 @@ body{
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-around;
+}
+
+.clear, .equals
+{
+    width: 100px;
+    border-radius: 10px;
 }
