@@ -16,8 +16,9 @@ function operate (op)                             // function to run arithmetic 
     return firstpara/c ;
 }
 let child = buttons.childNodes;                 //selecting child elements of arrange
+
 child.forEach((div)=>{
- div.addEventListener('click',(e)=>{            // When click happens on any of the div elements, fuction runs. 
+ div.addEventListener('click',function show(e) {            // When click happens on any of the div elements, function runs. 
   if((div.innerText==="+")||(div.innerText==="X")||(div.innerText==="/")||(div.innerText==="-")) // to check and save operator to be used
   {     
       if(!firstpara)
@@ -134,3 +135,15 @@ child.forEach((div)=>{
   }
 });
 });
+
+document.addEventListener('keydown', function (e)   //keyboard support 
+{
+    let keyy = document.querySelector(`div[data-key="${e.keyCode}`);  // keyy is assigned which Selects the div from the entire document, who has data-key attribute already defined 
+    if(!keyy)                                                          // if the keycode matches as the specified date-key( of the key which is pressed down (e)) ,its selected and assigned
+    {
+      return;
+    }    
+    else
+    keyy.click();                                 // if key exists, a fake click is created at the key. 
+});
+
