@@ -7,13 +7,13 @@ let buttons = document.querySelector('.arrange'); // calling all the nodelist of
 function operate (op)                             // function to run arithmetic operation. 
 {   
     if (op === "+")    
-    return firstpara + c ;
+    return Number(firstpara) + Number(c) ;
     else if( op ==="X")
-    return firstpara * c;
+    return Number(firstpara) * Number(c);
     else if (op==="-")
-    return firstpara - c ;
+    return Number(firstpara) - Number(c) ;
     else if ( op ==="/")
-    return firstpara/c ;
+    return Number(firstpara)/Number(c) ;
 }
 let child = buttons.childNodes;                 //selecting child elements of arrange
 
@@ -55,7 +55,7 @@ child.forEach((div)=>{
       outputs.innerHTML = `${c}`;
       return;
     }
-    if((c)&&(firstpara))
+    if((c)&&(firstpara)&&(!out))
     {
       outputs.innerHTML = operate(op);
       out= operate(op);
@@ -66,11 +66,16 @@ child.forEach((div)=>{
       outputs.innerHTML = " ";
       return;
     }
+    if(!out)
+    {
     outputs.innerHTML = `${firstpara}`;
     outputs.innerHTML = operate(op);
     firstpara = operate(op);
     console.log(firstpara);
     c = 0;
+    return;
+    }
+    else
     return;
   } 
   else if (div.innerText==="C")           // when clear button is run 
@@ -92,16 +97,24 @@ child.forEach((div)=>{
         outputs.innerHTML = out;
         return;
       }
-      else return;
-    }
-    else if(Number.isInteger(c))
-    {
-      c = c + div.innerHTML;
-      outputs.innerHTML = c;
-      console.log(c);
+      else if(out.includes("."))
+      {
+      return;
+      }
+      else
+      out = out + div.innerHTML;
+      outputs.innerHTML = out;
       return;
     }
-      else  return;
+    else if(c.includes("."))
+    {
+      return;
+    }
+      else  
+      c = c + div.innerHTML;
+      outputs.innerHTML = c;
+      return;
+
   }
   else if(div.innerHTML==="CE")
   {
@@ -129,8 +142,7 @@ child.forEach((div)=>{
   else                                    // where the numbers are entered into Calculator
   {
   c = c + div.innerHTML;
-  c = Number(c);
-  outputs.innerHTML = (c);
+  outputs.innerHTML =  (c);
   console.log(c);
   }
 });
