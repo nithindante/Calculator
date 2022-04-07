@@ -55,10 +55,17 @@ child.forEach((div)=>{
       outputs.innerHTML = `${c}`;
       return;
     }
+    if(out==="")
+    {
+    out=" ";
+    outputs.innerHTML = " ";
+    return;
+    }
     if((c)&&(firstpara)&&(!out))
     {
       outputs.innerHTML = operate(op);
       out= operate(op);
+      console.log("andi")
       return;
     }
     if((c==0)&&(firstpara==0))
@@ -66,7 +73,7 @@ child.forEach((div)=>{
       outputs.innerHTML = " ";
       return;
     }
-    if(!out)
+    else if(!out)
     {
     outputs.innerHTML = `${firstpara}`;
     outputs.innerHTML = operate(op);
