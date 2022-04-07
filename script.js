@@ -16,7 +16,6 @@ function operate (op)                             // function to run arithmetic 
     return Number(firstpara)/Number(c) ;
 }
 let child = buttons.childNodes;                 //selecting child elements of arrange
-
 child.forEach((div)=>{
  div.addEventListener('click',function show(e) {            // When click happens on any of the div elements, function runs. 
   if((div.innerText==="+")||(div.innerText==="X")||(div.innerText==="/")||(div.innerText==="-")) // to check and save operator to be used
@@ -48,7 +47,7 @@ child.forEach((div)=>{
       c = 0;
       return;
   }
-  else if(div.innerText === "=")              // when the equal to operator is clicked
+  else if(div.innerText === "=")              // when the equal to operator is clicked( various condtions are checked)
   { 
     if((c!=0)&&(firstpara==0))
     {
@@ -94,7 +93,7 @@ child.forEach((div)=>{
     out= 0;
     return;
   } 
-  else if(div.innerText===".")
+  else if(div.innerText===".")          //when dot button is clicked 
   {
     if((c!==0)&&(firstpara!==0)&&(out!==0))
     {
@@ -104,7 +103,7 @@ child.forEach((div)=>{
         outputs.innerHTML = out;
         return;
       }
-      else if(out.includes("."))
+      else if(out.includes("."))        //to check whether the number( string) already has a dot 
       {
       return;
       }
@@ -123,7 +122,7 @@ child.forEach((div)=>{
       return;
 
   }
-  else if(div.innerHTML==="CE")
+  else if(div.innerHTML==="CE")                 // Added Backspace to the programm
   {
     if((c!==0)&&(firstpara!==0)&&(out!==0))
     {
